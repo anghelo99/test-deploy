@@ -8,7 +8,8 @@ import plotly.express as px
 #df = pd.read_csv('https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv')
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-app = dash.Dash(__name__, server=app.server, external_stylesheets=external_stylesheets, external_scripts=[{"src": "https://cdn.plot.ly/plotly-2.3.1.min.js"}])
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets, external_scripts=[{"src": "https://cdn.plot.ly/plotly-2.3.1.min.js"}])
+server=app.server
 
 df = pd.read_csv('owid-covid-data.csv')
 dff = df[df['location']=='Australia']
